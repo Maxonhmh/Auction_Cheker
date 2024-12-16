@@ -1,1 +1,0 @@
-# Auction_Cheker
