@@ -171,9 +171,11 @@ async def receive_item_name(message: types.Message):
 
     if item_id:
         await message.answer(f"Предмет {item_name} имеет ID {item_id}.")
+        await start_command(message)
         user_alerts[user_id]['name'] = item_name  
     else:
         await message.answer(f"Предмет с названием {item_name} не найден.")
+        await start_command(message)
     
     await start_command(message)
 
